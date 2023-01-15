@@ -6,9 +6,9 @@ from telebot import types
 import schedule
 import time
 
-API_KEY = '5829570171:AAFNkFeVPIhgwFm6-gbijkNMKIGLK2B9HE8'
+API_KEY = 'Your_API_KEY'
 
-url = "https://www.dutchnews.nl/news/category/society/"
+url = "Your_Site_URL"
 
 
 headers = {"User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"}
@@ -32,7 +32,7 @@ def send_news(message=None):
     if message is not None:
         chat_id = message.chat.id
     else:
-        chat_id = 335249930
+        chat_id = 'your_chat_id'
     bot.send_message(chat_id=chat_id, text="Main news -" + news)
 
 to_do = schedule.every().day.at("09:00").do(send_news)
@@ -43,12 +43,6 @@ while True:
     time.sleep(1)
 
 
-
-'''
-translator = Translator(from_lang="english",to_lang="russian")
-translation = translator.translate(news)
-print (translation)
-'''
 
 
 bot.polling()
