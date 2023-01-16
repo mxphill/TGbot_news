@@ -1,8 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
-from translate import Translator
 import telebot
-from telebot import types
+#from telebot import types
 import schedule
 import time
 
