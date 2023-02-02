@@ -34,7 +34,7 @@ def send_news(message=None):
         chat_id = 'your_chat_id'
     bot.send_message(chat_id=chat_id, text="Main news -" + news)
 
-to_do = schedule.every().day.at("09:00").do(send_news) #еime when me need getting a news
+to_do = schedule.every().day.at("09:00").do(send_news) #time when me need getting a news
 
 
 while True:
